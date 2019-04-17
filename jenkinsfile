@@ -12,8 +12,8 @@ try {
 
    stage('terraform init'){
 
-        terraform init
-	terraform plan
+       sh ' terraform init'
+       sh 'terraform plan'
 
 	}
 
