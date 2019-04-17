@@ -1,0 +1,22 @@
+#!groovy
+
+node('master'){
+
+try {
+    cleanWs()
+    stage('git pull'){
+
+        checkout scm
+
+	}
+
+   stage('terraform init'){
+
+        terraform init
+	terraform plan
+
+	}
+
+}
+
+}
