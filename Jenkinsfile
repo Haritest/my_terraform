@@ -24,7 +24,7 @@ fi'''
 
        sh 'terraform init'
        sh 'terraform plan'
-       sh 'terraform apply -input=false'
+       sh 'terraform apply -auto-approve'
 	}
 
 }
