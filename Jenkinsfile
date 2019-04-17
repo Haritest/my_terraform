@@ -3,7 +3,7 @@
 node('master') {
 
 try {
-    cleanWs()
+//    cleanWs()
     stage('git pull') {
 
         checkout scm
