@@ -16,14 +16,15 @@ sh '''if [ "$AWS_Region" = "Asia Pacific (Mumbai) ap-south-1"  -a  "$OS_Types" =
 then
         export TF_VAR_image_id=ami-0a574895390037a62
         echo "Install $TF_VAR_image_id in Mumbai Region"
-elif [ "$AWS_Region" = "Asia Pacific (Singapore) ap-southeast-1"  -a  "$OS_Types" = "Ubuntu 14.04" ]
-then	IAM=ub-14
-	    echo "Install $IAM in $AWS_Region Region"
+elif [ "$AWS_Region" = "Asia Pacific (Singapore) ap-southeast-1"  -a  "$OS_Types" = "Ubuntu 18.04" ]
+then	
+        export TF_VAR_image_id=ami-007d5db58754fa284
+	    echo "Install $TF_VAR_image_id in $AWS_Region Region"
 fi'''
 
-       sh ' terraform init'
+       sh 'terraform init'
        sh 'terraform plan'
-
+       sh 'terraform apply'
 	}
 
 }
