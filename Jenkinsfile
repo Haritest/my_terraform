@@ -20,7 +20,7 @@ then
        sh 'terraform apply -var="image_id=ami-0a574895390037a62" -auto-approve'
 
 
-elif [ "$AWS_Region" = "Asia Pacific (Singapore) ap-southeast-1"  -a  "$OS_Types" = "Ubuntu 18.04" ]
+elif [ "$AWS_Region" = "Asia Pacific (Mumbai) ap-south-1"  -a  "$OS_Types" = "Ubuntu 18.04" ]
 then	
        echo "creating Ubuntu 18.04"
        sh 'terraform init'
