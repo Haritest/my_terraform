@@ -1,6 +1,6 @@
 
 resource "aws_instance" "web" {
-  ami           = "${var.image_version["16.04"]}"
+  ami           = "${TF_VAR_ami}"
   instance_type = "t2.micro"
   key_name      = "deployer-key"
   subnet_id     = "${aws_subnet.subnet1.id}"
