@@ -1,16 +1,16 @@
 #!groovy
 
-node('master'){
+node('master') {
 
 try {
     cleanWs()
-    stage('git pull'){
+    stage('git pull') {
 
         checkout scm
 
 	}
 
-   stage('terraform init'){
+   stage('terraform init') {
 
        sh ' terraform init'
        sh 'terraform plan'
